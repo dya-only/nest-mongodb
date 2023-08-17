@@ -8,7 +8,7 @@ export class UserService {
   constructor(@InjectModel(User.name) private userModel: Model<User>) {}
 
   async findAll(): Promise<User[]> {
-    return this.userModel.find().exec() // 반환값이 있는 경우 exec()를 통해 온전한 프로미스를 반환값으로 얻을 수 있다.
+    return this.userModel.find().exec()
   }
 
   async findById(_id: Types.ObjectId) {
